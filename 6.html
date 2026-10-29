@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experiment 6</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+
+    <form onsubmit="return check()">
+        Name: <input type="text" id="name"><br><br>
+        Password: <input type="password" id="pass"><br><br>
+        <input type="submit" value="Register">
+    </form>
+
+    <script>
+    function check() {
+        let n = document.getElementById("name").value;
+        let p = document.getElementById("pass").value;
+
+        if (n.length < 6) {
+            alert("Name must have 6 characters");
+            return false;
+        }
+
+        if (p.length < 6) {
+            alert("Password must have 6 characters");
+            return false;
+        }
+
+        alert("Valid Details");
+        return false;
+    }
+    </script>
+</body>
+</html>
